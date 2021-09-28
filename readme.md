@@ -8,7 +8,8 @@
 
 to start the server 
 
->>> cd rms 
->>> npm start 
->>> go to localhost:3000 to view the page
+`
+cd rms 
+npm start 
+go to localhost:3000 to view the page`
 
