@@ -5,3 +5,10 @@
 ### You can select any issue and work on it 
 
 ### Happy Hacktober!!!
+
+to start the server 
+
+>>> cd rms 
+>>> npm start 
+>>> go to localhost:3000 to view the page
+
