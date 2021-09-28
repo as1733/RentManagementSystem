@@ -1,0 +1,23 @@
+{
+  "name": "rentmanagementsystem",
+  "version": "1.0.0",
+  "description": "rent management system , a webapp based on react and nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as1733/RentManagementSystem.git"
+  },
+  "keywords": [
+    "Hacktober21",
+    "RentManagementSystem"
+  ],
+  "author": "aditya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/as1733/RentManagementSystem/issues"
+  },
+  "homepage": "https://github.com/as1733/RentManagementSystem#readme"
+}
