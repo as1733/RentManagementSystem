@@ -8,7 +8,9 @@
 
 to start the server 
 
-```cd rms 
+```
+gh repo clone as1733/RentManagementSystem
+cd rms 
 npm start 
 go to localhost:3000 to view the page
 ```
