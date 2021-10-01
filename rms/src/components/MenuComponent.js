@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import ReactBootstrap, {Jumbotron, Button, Col, Grid, Panel, Navbar,Container,FormGroup, Nav, Form, FormControl ,NavDropdown} from 'react-bootstrap'
+import LoginModal from './loginModal.js';
 //
 // const Styles = styled.div`
 //   .navbar { background-color: #222; }
@@ -23,7 +24,18 @@ import ReactBootstrap, {Jumbotron, Button, Col, Grid, Panel, Navbar,Container,Fo
 class NavigationBar extends Component{
     constructor(props) {
         super(props);
+        this.state = {
+            showModal: false
+        }
+        this.handleModal = this.handleModal.bind(this);
     }
+
+    handleModal(boolean) {
+        this.setState({
+            showModal: boolean
+        })
+    }
+
     render() {
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -57,12 +69,19 @@ class NavigationBar extends Component{
                             />
                             <Button variant="outline-success">Search</Button>
                         </Form>
+                        <Nav>
+                            <Button variant="dark" onClick={() => this.handleModal(true)}>Login</Button>
+                        </Nav>
                     </Navbar.Collapse>
                 </Container>
+                <LoginModal
+                    handleModal={this.handleModal}
+                    showModal={this.state.showModal}
+                />
             </Navbar>
         )
     }
 
 }
 
-export default  NavigationBar;
+export default NavigationBar;
