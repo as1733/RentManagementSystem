@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import ReactBootstrap, {Jumbotron, Button, Col, Grid, Panel, Navbar,Container,FormGroup, Nav, Form, FormControl ,NavDropdown} from 'react-bootstrap'
-import LoginModal from './loginModal.js';
+import UserAuthModal from './UserAuthModal.js';
 //
 // const Styles = styled.div`
 //   .navbar { background-color: #222; }
@@ -25,7 +25,8 @@ class NavigationBar extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            showModal: false
+            showModal: false,
+            isTokenDetected: false
         }
         this.handleModal = this.handleModal.bind(this);
     }
@@ -70,13 +71,18 @@ class NavigationBar extends Component{
                             <Button variant="outline-success">Search</Button>
                         </Form>
                         <Nav>
-                            <Button variant="dark" onClick={() => this.handleModal(true)}>Login</Button>
+                            <Button variant="dark" onClick={() => this.handleModal(true)}>
+                                { 
+                                    this.state.isTokenDetected ? 'Login' : 'Sign Up'
+                                }
+                            </Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-                <LoginModal
+                <UserAuthModal
                     handleModal={this.handleModal}
                     showModal={this.state.showModal}
+                    isTokenDetected={this.state.isTokenDetected}
                 />
             </Navbar>
         )

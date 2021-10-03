@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
 
-const LoginModal = (props) => {
+const UserAuthModal = (props) => {
+  const [modalTitle, setModalTitle] = useState(false);
+
+  useEffect(() => {
+    setModalTitle(props.isTokenDetected);
+  }, [props.isTokenDetected])
+
   return (
     <>
       <Modal
@@ -11,7 +17,11 @@ const LoginModal = (props) => {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>User Login</Modal.Title>
+          <Modal.Title>
+            {
+              modalTitle ? 'User Login' : 'User Sign Up'
+            }
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -31,4 +41,4 @@ const LoginModal = (props) => {
   )
 }
 
-export default LoginModal;
+export default UserAuthModal;
