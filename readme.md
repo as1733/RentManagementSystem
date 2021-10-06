@@ -3,7 +3,7 @@
 ### The code is in rms folder , we are going to create a react app for rentManagement for landlords and Tenants
 
 ### You can select any issue and work on it 
-### Please create and an issue before start work on any thing , so that your work is quickly accepted (/)
+### Please create and an issue before start work on any thing , so that your work is quickly accepted :heavy_check_mark: 
 
 ### Happy Hacktober!!!
 
