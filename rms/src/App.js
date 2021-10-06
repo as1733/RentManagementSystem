@@ -1,14 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import NavigationBar from './components/MenuComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carosul  from "./components/carousel";
+import About from './pages/About';
+import {Switch,Route} from 'react-router-dom';
 function App() {
   return (
-
-    <div className="App">
-      <NavigationBar />
-        <Carosul></Carosul>
+    <div className='App'>
+      <Switch>
+        <Route path='/' exact>
+          <NavigationBar />
+          <Carosul></Carosul>
+        </Route>
+        <Route path="/aboutus">
+          <About />
+        </Route>
+      </Switch>
     </div>
   );
 }
