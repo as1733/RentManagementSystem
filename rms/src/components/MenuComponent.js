@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 import ReactBootstrap, {Jumbotron, Button, Col, Grid, Panel, Navbar,Container,FormGroup, Nav, Form, FormControl ,NavDropdown} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import LoginModal from './loginModal.js';
 //
 // const Styles = styled.div`
@@ -71,6 +71,7 @@ class NavigationBar extends Component{
                         </Form>
                         <Nav>
                             <Button variant="dark" onClick={() => this.handleModal(true)}>Login</Button>
+                            <Link to='/' className='nav-link'>About us</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
