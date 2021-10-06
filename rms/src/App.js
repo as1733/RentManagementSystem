@@ -1,14 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import NavigationBar from './components/MenuComponent';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Carosul  from "./components/carousel";
+import "./App.css";
+import NavigationBar from "./components/MenuComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import Carousel from "./components/carousel";
+
 function App() {
   return (
-
     <div className="App">
       <NavigationBar />
-        <Carosul></Carosul>
+      <Carousel></Carousel>
     </div>
   );
 }
