@@ -5,6 +5,7 @@ export default function About() {
     return (
         <Container>
             <h1>About Us Page</h1>
+            <h1>Hi</h1>
             <Link to='/'>Home </Link>
         </Container>
     )
