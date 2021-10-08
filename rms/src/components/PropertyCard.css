@@ -1,0 +1,13 @@
+.card-img-top {
+    width: auto;
+    max-width: inherit;
+    height: 16vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    .card-img-top {
+        width: flex;
+        max-width: inherit;
+        height: 10vh;
+    }
+  }

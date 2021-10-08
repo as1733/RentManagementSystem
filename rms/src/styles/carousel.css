@@ -1,0 +1,9 @@
+.c-img {
+  height: 30vh;
+}
+
+@media screen and (max-width: 576px) {
+  .c-img {
+    height: 50vh;
+  }
+}
