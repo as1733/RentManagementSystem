@@ -4,6 +4,32 @@
     height: 16vh;
 }
 
+.onlyhover {
+    opacity: 0;
+    margin: 0%;
+    padding:-60%;
+    display: flex;
+    position: absolute;}
+   
+.onlyhover:hover{
+    opacity: 1;
+    position: absolute;
+    /* other styles (left, top, right, and padding) */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(to top, rgba(130, 190, 201, 0.85), transparent);
+}
+
+
+
+a img:hover {
+    opacity: 0.8;
+  }
+
+
+
+
 @media only screen and (max-width: 1000px) {
     .card-img-top {
         width: flex;

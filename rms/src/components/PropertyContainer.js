@@ -81,7 +81,12 @@ class PropertyContainer extends Component{
   }
   render()
   {
-    const tags_to_render = this.state.propsResponse.map((e)=>{return(<PropertyCard cardText={e.cardText} cardTitle = {e.cardTitle} imgLocation = {e.imgLocation}></PropertyCard>)})
+    const tags_to_render = this.state.propsResponse.map((e,idx)=>{
+      return(
+              <PropertyCard cardText={e.cardText} cardTitle = {e.cardTitle} idx={idx} imgLocation = {e.imgLocation} key={idx}></PropertyCard>
+              )
+                                                              }
+                                                        )
 
     return(
 
