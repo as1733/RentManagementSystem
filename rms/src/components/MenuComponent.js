@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import ReactBootstrap, {
   Jumbotron,
@@ -61,6 +62,7 @@ class NavigationBar extends Component{
                         <Nav className="me-auto">
                             <Nav.Link href="#features">Features</Nav.Link>
                             <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link href='aboutus'>About Us</Nav.Link>
                             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -90,6 +92,7 @@ class NavigationBar extends Component{
                                     this.state.isTokenDetected ? 'Login' : 'Sign Up'
                                 }
                             </Button>
+                            <Link to='/aboutus' className='nav-link'>About Us </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -102,56 +105,6 @@ class NavigationBar extends Component{
         )
     }
 
-  render() {
-    return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Rent Management Systems</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#About">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Form className="d-flex">
-              <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
-            <Nav>
-            <Button variant="dark" onClick={() => this.handleModal(true)}>
-                { 
-                    this.state.isTokenDetected ? 'Login' : 'Sign Up'
-                }
-            </Button>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-        <UserAuthModal
-                    handleModal={this.handleModal}
-                    showModal={this.state.showModal}
-                    isTokenDetected={this.state.isTokenDetected}
-        />
-      </Navbar>
-    );
-  }
 }
 
 export default NavigationBar;
