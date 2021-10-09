@@ -12,13 +12,14 @@ import { generatePath } from "react-router";
 class PropertyContainer extends Component{
   constructor(props){
     super(props);
+
     this.props = props;
 
     const jsonListOfPropeties = 
     [
       
       {
-        cardTitle : "Mumbai",
+        cardTitle : "Mumbai- Rendering from the frontend only ",
         cardText : "Rent: Rs3000, 3bhk",
         imgLocation : "sample1.svg"
       }
@@ -73,7 +74,7 @@ class PropertyContainer extends Component{
         imgLocation : "logo192.png"
       }
     ]
-
+    this.jsonlist= jsonListOfPropeties
 
       this.state = {propsResponse: [] }
   
@@ -90,7 +91,12 @@ class PropertyContainer extends Component{
 
         }).then((e)=>{
           console.log(e)
+
           this.setState({propsResponse:e.output})
+    }).catch((e)=>{
+      alert("Backend express server is not respondind please start it by going to 'backendserver/ and running command 'npm start' currently the cards being rendered " +
+          "using the static json from rms/src/components/PropertyContainer.js ->variable - jsonListOfPropeties")
+      this.setState({propsResponse:this.jsonlist})
     })
   }
 
