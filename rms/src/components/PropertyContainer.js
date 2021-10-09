@@ -75,10 +75,27 @@ class PropertyContainer extends Component{
     ]
 
 
-      this.state = {propsResponse: jsonListOfPropeties }
+      this.state = {propsResponse: [] }
   
       
   }
+
+
+  componentDidMount() {
+    fetch('/api/v1/propertyapi/list')
+        .then((data)=>{
+          var k=data.json()
+          console.log(data)
+          return k;
+
+        }).then((e)=>{
+          console.log(e)
+          this.setState({propsResponse:e.output})
+    })
+  }
+
+
+
   render()
   {
     const tags_to_render = this.state.propsResponse.map((e)=>{return(<PropertyCard cardText={e.cardText} cardTitle = {e.cardTitle} imgLocation = {e.imgLocation}></PropertyCard>)})

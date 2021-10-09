@@ -54,7 +54,7 @@ class NavigationBar extends Component{
 
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky={"top"}>
                 <Container>
                     <Navbar.Brand href="#home">Rent Management Systems</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
