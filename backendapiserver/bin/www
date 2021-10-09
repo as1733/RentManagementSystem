@@ -8,11 +8,18 @@ var app = require('../app');
 var debug = require('debug')('backendapiserver:server');
 var http = require('http');
 
+var dotenv= require('dotenv')
+console.log(__dirname)
+dotenv.config({path: __dirname +"/../configs/dev.env"})
+
+
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
+console.log(port)
+// console.log(process.env)
 app.set('port', port);
 
 /**
