@@ -39,5 +39,9 @@ npm start
 ✅ Property Api Working Fine 
 
 
+screenshot:
+
+![image](https://user-images.githubusercontent.com/23198278/136646661-6433fe0d-a1ec-4ac7-b62b-eb13dbbaf8e3.png)
+
 
 
