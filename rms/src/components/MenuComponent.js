@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import ReactBootstrap, {
   Jumbotron,
@@ -16,7 +16,7 @@ import ReactBootstrap, {
   NavDropdown,
 } from "react-bootstrap";
 
-import UserAuthModal from './UserAuthModal.js';
+import UserAuthModal from "./UserAuthModal.js";
 //
 // const Styles = styled.div`
 //   .navbar { background-color: #222; }
@@ -36,15 +36,15 @@ import UserAuthModal from './UserAuthModal.js';
 //   }
 // `;
 
-class NavigationBar extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            showModal: false,
-            isTokenDetected: false
-        }
-        this.handleModal = this.handleModal.bind(this);
-    }
+class NavigationBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      isTokenDetected: false,
+    };
+    this.handleModal = this.handleModal.bind(this);
+  }
 
     handleModal(boolean) {
         this.setState({
@@ -80,18 +80,18 @@ class NavigationBar extends Component{
                             <FormControl
                                 type="search"
                                 placeholder="Search"
-                                className="mr-2"
+                                className="me-2"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button variant="outline-success" className="me-2">Search</Button>
                         </Form>
                         <Nav>
-                            <Button variant="dark" onClick={() => this.handleModal(true)}>
+                            <Button variant="secondary" onClick={() => this.handleModal(true)}>
                                 { 
                                     this.state.isTokenDetected ? 'Login' : 'Sign Up'
                                 }
                             </Button>
-                            <Link to='/aboutus' className='nav-link'>About Us </Link>
+                            <NavLink to='/aboutus' className='nav-link' activeClassName="active">About Us </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

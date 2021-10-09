@@ -7,13 +7,41 @@
 
 ### Happy Hacktober!!! ✅
 
+
+
 to start the server 
 
 ```
+start the frontend server :- 
 gh repo clone as1733/RentManagementSystem
 cd rms 
 npm install
 npm start 
 go to localhost:3000 to view the page
+
+start the express server :
+cd backendapiserver
+npm start 
+
 ```
+
+
+
+
+## Current Status 
+### Frontend 
+✅ Navbar with login/signup 
+✅ Homepage Image Carousel 
+✅ Property Cards on homepage with buttons to pay rent or upload bills
+
+### Backend 
+✅ Express server configured 
+✅ Property Api Working Fine 
+
+
+screenshot:
+
+![image](https://user-images.githubusercontent.com/23198278/136646661-6433fe0d-a1ec-4ac7-b62b-eb13dbbaf8e3.png)
+
+
 
