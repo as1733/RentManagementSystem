@@ -46,6 +46,7 @@ jobs:
         - run : |
             cd rms
             npm install
+            pwd 
         - run : cd /root/actions-runner/rms/RentManagementSystem/RentManagementSystem/rms
         - run: |
             echo Testing Done
