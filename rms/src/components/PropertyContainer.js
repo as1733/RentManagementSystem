@@ -25,7 +25,7 @@ class PropertyContainer extends Component{
       }
       ,
       {
-        cardTitle : "Delhi",
+        cardTitle : "Delhi -- sending new output using the github actions",
         cardText : "Rent: Rs2000, 2bhk",
         imgLocation : "logo192.png"
       },
