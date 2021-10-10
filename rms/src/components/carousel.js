@@ -4,7 +4,7 @@ import img1 from "../shared/sample1.svg";
 import img2 from "../shared/sample2.svg";
 import img3 from "../shared/sample3.svg";
 
-class Carosul extends Component {
+class Carousel extends Component {
   constructor(props) {
     super(props);
   }
@@ -80,4 +80,4 @@ class Carosul extends Component {
   }
 }
 
-export default Carosul;
+export default Carousel;
