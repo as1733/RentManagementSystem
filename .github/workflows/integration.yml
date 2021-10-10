@@ -43,8 +43,10 @@ jobs:
           uses: actions/setup-node@v1
           with:
               node-version: ${{ matrix.node-version }}
+        - run : |
+            cd rms
+            npm install
         - run : cd /root/actions-runner/rms/RentManagementSystem/RentManagementSystem/rms
-        - run : npm install_react
         - run: |
             echo Testing Done
             echo Deployment ok.
