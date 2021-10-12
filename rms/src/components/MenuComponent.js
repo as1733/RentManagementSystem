@@ -40,8 +40,7 @@ class NavigationBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false,
-      isTokenDetected: false,
+      showModal: false
     };
     this.handleModal = this.handleModal.bind(this);
   }
@@ -87,9 +86,7 @@ class NavigationBar extends Component {
                         </Form>
                         <Nav>
                             <Button variant="secondary" onClick={() => this.handleModal(true)}>
-                                { 
-                                    this.state.isTokenDetected ? 'Login' : 'Sign Up'
-                                }
+                                Login
                             </Button>
                             <NavLink to='/aboutus' className='nav-link' activeClassName="active">About Us </NavLink>
                         </Nav>
@@ -98,7 +95,6 @@ class NavigationBar extends Component {
                 <UserAuthModal
                     handleModal={this.handleModal}
                     showModal={this.state.showModal}
-                    isTokenDetected={this.state.isTokenDetected}
                 />
             </Navbar>
         )

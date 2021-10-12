@@ -8,7 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var propertyApi = require('./routes/propertyApi')
-
+var authenticationApi = require('./routes/authentication')
 var cors = require('cors')
 var app = express()
 
@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, '../rms/build')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/v1/propertyapi',propertyApi)
+app.use('/api/v1/auth',authenticationApi)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
