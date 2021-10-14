@@ -1,39 +1,52 @@
 .card-img-top {
-    width: auto;
-    max-width: inherit;
-    height: 16vh;
+  width: auto;
+  max-width: inherit;
+  height: 16vh;
 }
 
-.onlyhover {
+/* .onlyhover {
     opacity: 0;
     margin: 0%;
     padding:-60%;
     display: flex;
-    position: absolute;}
+    position: absolute;
+}
    
 .onlyhover:hover{
     opacity: 1;
     position: absolute;
-    /* other styles (left, top, right, and padding) */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background: linear-gradient(to top, rgba(130, 190, 201, 0.85), transparent);
+} */
+
+.property-container {
+  position: relative;
 }
 
+.hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+}
 
+.property-container:hover .hoverText {
+    opacity: 1;
+}
 
 a img:hover {
-    opacity: 0.8;
-  }
-
-
-
+  opacity: 0.2;
+}
 
 @media only screen and (max-width: 1000px) {
-    .card-img-top {
-        width: flex;
-        max-width: inherit;
-        height: 10vh;
-    }
+  .card-img-top {
+    width: flex;
+    max-width: inherit;
+    height: 10vh;
   }
+}
