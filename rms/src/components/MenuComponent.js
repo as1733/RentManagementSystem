@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Cookies from 'js-cookie';
 import ReactBootstrap, {
   Jumbotron,
   Button,
@@ -40,7 +41,8 @@ class NavigationBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      islogged: Cookies.get('__ilin')
     };
     this.handleModal = this.handleModal.bind(this);
   }
@@ -52,6 +54,9 @@ class NavigationBar extends Component {
     }
 
     render() {
+        
+        let text = this.state.islogged=='true' ? "Logout":'Login'
+
         return (
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky={"top"}>
                 <Container>
@@ -85,8 +90,9 @@ class NavigationBar extends Component {
                             <Button variant="outline-success" className="me-2">Search</Button>
                         </Form>
                         <Nav>
+
                             <Button variant="secondary" onClick={() => this.handleModal(true)}>
-                                Login
+                                {text} 
                             </Button>
                             <NavLink to='/aboutus' className='nav-link' activeClassName="active">About Us </NavLink>
                         </Nav>
@@ -95,6 +101,7 @@ class NavigationBar extends Component {
                 <UserAuthModal
                     handleModal={this.handleModal}
                     showModal={this.state.showModal}
+                    islogged={this.state.islogged}
                 />
             </Navbar>
         )
