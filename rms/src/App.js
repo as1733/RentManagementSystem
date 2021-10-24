@@ -6,6 +6,8 @@ import Carousel from "./components/carousel";
 import About from './pages/About';
 import {Switch,Route} from 'react-router-dom';
 import PropertyContainer from './components/PropertyContainer';
+import Error from "./pages/Error";
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,9 @@ function App() {
         </Route>
         <Route path="/aboutus">
           <About />
+        </Route>
+        <Route>
+          <Error />
         </Route>
       </Switch>
     </div>

@@ -1,0 +1,99 @@
+/* For 404-Error-page */
+
+.not-found-1{
+    position: relative;
+    height : 100vh;
+}
+
+.not-found-1 .not-found-2{
+    position : absolute;
+    left : 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.not-found-2{
+    max-width: 920px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.not-found-2 .not-found-404{
+    position: absolute;
+    height: 100px;
+    top: 0;
+    left : 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.not-found-2 .not-found-404 h1{
+    font-family: "Maven Pro",sans-serif;
+    color: #ececec;
+    font-weight: 900;
+    font-size: 396px;
+    margin: 0px;
+    position : absolute;
+    left : 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.not-found-2 h2{
+    font-family: "Maven Pro",sans-serif;
+    color: #000;
+    font-weight: 900;
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.not-found-2 p{
+    font-family: "Maven Pro",sans-serif;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.not-found-2 a{
+    font-family: "Maven Pro",sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration:none;
+    text-transform: uppercase;
+    background: #189cf0;
+    display: inline-block;
+    padding : 16px 38px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.not-found-2 a:hover{
+    background-color: #fff;
+    border-color: #189cf0;
+    color: #189cf0;
+}
+
+@media only screen and (max-width: 480px){
+    .not-found-2 .not-found-404 h1{
+        font-size: 162px;
+    }
+    .not-found-2 h2{
+        font-size: 26px;
+    }
+}
